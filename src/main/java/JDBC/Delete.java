@@ -54,5 +54,6 @@ public class Delete extends HttpServlet {
 		catch(ClassNotFoundException e) {
 			e.printStackTrace();
 	}
+		pw.println("<button type='submit' name=' Home' ><a href ='index.jsp'>Home</a>");
 	}
 }

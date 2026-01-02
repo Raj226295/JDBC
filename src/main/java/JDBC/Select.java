@@ -69,6 +69,8 @@ public class Select extends HttpServlet {
 	}
 		
 		pw.println("<br><button type='submit' name='index'><a href='index.jsp'>Home</a></button>");
+		
+		pw.println("<button type='submit' name=' ShowUser' ><a href ='Select'>ShowUser</a>");
 	}
 
 }

@@ -12,7 +12,6 @@ import java.sql.*;
 
 @WebServlet("/Edit")
 public class Edit extends HttpServlet {
-    private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -37,13 +36,13 @@ public class Edit extends HttpServlet {
                 pw.println("<h2>Edit Employee</h2>");
                 pw.println("<form action='Update' method='post'>");
 
-                pw.println("<input type='hidden' name='id' value='" + rs.getInt(1) + "'>");
+                pw.println("<input type='hidden' name='id' value='" + rs.getInt("empid") + "'>");
 
                 pw.println("Name:<br>");
-                pw.println("<input type='text' name='ename' value='" + rs.getString(2) + "'><br><br>");
+                pw.println("<input type='text' name='username' value='" + rs.getString("empname") + "'><br><br>");
 
                 pw.println("Mobile:<br>");
-                pw.println("<input type='text' name='mobile' value='" + rs.getString(3) + "'><br><br>");
+                pw.println("<input type='text' name='mobileno' value='" + rs.getString("mobileno") + "'><br><br>");
 
                 pw.println("<input type='submit' value='Update'>");
                 pw.println("</form>");
@@ -51,7 +50,7 @@ public class Edit extends HttpServlet {
             con.close();
 
         } catch (Exception e) {
-            pw.println("Error: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }
