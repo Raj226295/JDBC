@@ -26,6 +26,17 @@ public class Select extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
+		
+		/* ======Add search from here =======*/
+		pw.println("<form method ='get' action='Select'>" );
+		pw.println("<input type='texrt' name='search' placeholder='Search by ID or Name'>");
+		pw.println("<input type ='submit' value='Search'>");
+		pw.println("</form><br>");
+		
+		/*=======Search form End ===*/
+		
+		String search =request.getParameter("search");
+		
 		try {
 			//load driver
 			Class.forName("com.mysql.cj.jdbc.Driver");
