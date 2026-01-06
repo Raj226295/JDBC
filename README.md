@@ -49,5 +49,3 @@ Is project me employee data ko **add, view, search, update aur delete** kiya ja 
 
 ---
 
-## ⚙️ How to Run Project
-1. Clone repository
